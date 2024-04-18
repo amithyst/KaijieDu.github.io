@@ -5,16 +5,39 @@
 	<head>
 		<!-- 支持中文 -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Kaijie Du - FuDan University |杜楷劼 复旦大学数学科学学院</title>
+		<title>Kaijie Du - Fudan University |杜楷劼 复旦大学数学科学学院</title>
+		<link rel="stylesheet" href="style.css">
 		<style type="text/css">
+		
+
 		body {
 			width: 1400px;
 			text-align: center;
 			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 			font-weight: 300;
 			font-size: 16px;
-			background-color: #FFF;
+			background-color: rgba(255, 255, 255, 0.5);
 		}
+
+		
+
+		#particles-js {
+            position: fixed; /* 背景固定不随滚动条滚动 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* 位于其他内容之下 */
+            background: #DDF; /* 背景颜色 */
+        }
+
+		/* 确保其他内容不被粒子动画覆盖 */
+        .content {
+            position: relative;
+            z-index: 1; /* 高于粒子层 */
+            color: white; /* 设置文本颜色以确保可见性 */
+            padding: 20px;
+        }
 
 		hr {
 			border: 0;
@@ -66,7 +89,7 @@
 		}
 
 		tr {
-			background-color: #FFF;
+			background-color: rgba(255, 255, 255, 0.5);
 		}
 
 		div#container {
@@ -75,7 +98,7 @@
 			width: 1200px;
 			text-align: left;
 			position: relative;
-			background-color: #FFF;
+			background-color:  rgba(255, 255, 255, 0.5);
 		}
 
 		div#DocInfo {
@@ -133,7 +156,7 @@
 		}
 
 		.section_div {
-			background-color: #FFF;
+			background-color: rgba(255, 255, 255, 0.5);
 			padding: 10px 10px 10px 10px;
 			margin: 10px 10px 10px 10px;
 			//border: 1px solid #AAA;
@@ -244,11 +267,26 @@
 
 	<body>
 		<div id="container">
+			<div id="particles-js"></div>
 			<div class='section_div'>
 				<table id="personal_info">
 					<tr>
-						<td><img class="photo_of_me" src="images/kaijiedu/Jack.png" width=250px
-								style="border: 1px solid black; float:left; margin-right:15px" /></td>
+						<td>
+							<div id="slider" class="slider">
+								<div class="slides">
+									<img src="images/kaijiedu/Jack.png" style="width:30%;">
+									<!-- 添加更多图片 -->
+									<img src="images/kaijiedu/Sea.jpg" style="width:30%;">
+									<img src="images/kaijiedu/Award.jpg" style="width:30%;">
+									<!-- 根据需要继续添加 -->
+								</div>
+							</div>
+							<!-- <button class="prev" onclick="moveSlide(-1)">❮</button>
+							<button class="next" onclick="moveSlide(1)">❯</button> -->
+						</td>
+						
+
+						
 						<td>
 							<div id="DocInfo">
 								<h1>Kaijie Du</h1>
@@ -259,6 +297,7 @@
 					
 								<!-- Github: -->
 								<a href="https://github.com/amithyst">Github</a> </a>
+								<br>
 								<a href="https://openreview.net/profile?id=~Kaijie_Du1">OpenReview</a> </a>
 								<!-- / -->
 								<!-- <a href="https://github.com/hyperplane-lab">Lab</a> </a> -->
@@ -280,24 +319,28 @@
 
 				杜楷劼 复旦大学-数学科学学院。
 				<br><br>
-				在过硬的数学基础上，我熟悉python/C++等语言，熟悉pytorch/tensorflow等多种深度学习框架，熟悉linux操作系统
-				,熟悉WSL/Docker等虚拟及工具，熟悉MobaXterm/VsCode连接远程服务器，熟悉复现github项目。
+				在过硬的数学基础上，我熟悉python/C++等语言，pytorch/tensorflow等多种深度学习框架，linux操作系统(如Ubuntu)
+				,WSL/Docker等虚拟机工具，MobaXterm/VsCode连接远程服务器，能独立阅读前沿论文，复现github项目。
 
 				<br><br>
-				未来7年，我想寻找一条通往通用人工智能的快速途径。
+				未来几年，我想实现我所寻找到通往通用人工智能的“登月快速路”。
 				我觉得，人脑其实就是不同的模型分工合作的结果。
 				复数个LLM负责“内部言语”(心理学概念)，一个LLM负责表达，一个“LLM”充当小脑和脑干传递神经信号。
-				人类自我意识的本质其实是能动性，能干涉外界的特性。谷歌近日提出了无限记忆的LLM架构。
+				人类自我意识的本质其实是能动性，能干涉外界的特性。
+				无限记忆/无限注意力的LLM架构早就出现了，完全可以胜任人类短期记忆能力。
+				只要模仿人类“睡眠”“做梦”时将记忆巩固的过程，就可以达到人类长期记忆能力。
 				当一个大语言模型通过与环境交互，能在无人与他交互的情况下探索，发现环境。无限制的生成“思绪”，自我意识也就诞生了。
 				
 				<br><br>
 				如今的大语言模型依然处于“为人服务”的范式。用户发起提问，他回答，结尾，等待用户的反馈。
-				当大语言模型转变为“能依靠自我思索的无限生成-实践-反馈”模式时，AGI也就诞生了。
-				关于这种模式的训练方法，我已经有了一套不错的方案的初步想法。
+				但是，“自我意识”本质是“私”。当大语言模型转变为“能依靠自我思索的无限生成-实践-反馈”模式时，AGI也就诞生了。
+				关于这种模式的训练方法，我</b>已经</b>有了一套不错的方案。
 
 				<br><br>
 				STEP1 利用现有的大语言模型架构创造出能自我探索学习的AGI框架。
 				现有的研究工作如Infinite-LLM framework，StreamingLLM等都能一定程度上实现无限记忆；
+				<br>
+				STEP1.5 模仿人类大脑睡眠，能用“睡眠学习”训练自己，固化长期记忆；
 				<br>
 				STEP2 做一个多模态的输入端，能让LLM理解外界环境。
 				<br>
@@ -353,12 +396,13 @@
 
 			<div class='section_div'>
 			<h2>News</h2>
-			<li>[2024/04] <b><font color="red" style="background-color:yellow;" >NEW</font></b> 尝试复现并研究minedojo项目	</li>
+			<li>[2024/04/17] <b><font color="red" style="background-color:yellow;" >NEW</font></b> 提出一系列AGI的搭建结构，编写好初步的AGI研究方案。</li>
+			<li>[2024/04] 尝试复现并研究minedojo项目</li>
 			<li>[2024/03] 复现了github上一系列项目，自学了计算机基础课程《数据结构》《计算机组成原理》</li>
 			<li>[2024/02/27] CVPR终究是拒稿了/(ㄒoㄒ)/~~</li>
 			<li>[2024/02] 在杨老师提点下完成了RL入门</li>
 			<li>[2024/01] 本学期专业课如概率论，人工智能<b><font color="red" style="background-color:yellow;" >全A</font></b>。寒假里熟悉了leetcode的C++题目，能cover所有middle题。</li>
-			<li>[2023/12] 获得了<b><font color="red" style="background-color:yellow;" ></font>全国大学生数学竞赛上海赛区一等奖，复旦大学永赢基金奖学金（冠名一等奖）</font></b></li>
+			<li>[2023/12] 获得了<b><font color="red" style="background-color:yellow;" >全国大学生数学竞赛上海赛区一等奖，复旦大学永赢基金奖学金（冠名一等奖）</font></b></li>
 			<li>[2023/11] softmatch算法复现失败,CIFAR数据集中没有达到论文里的准确度(相差6个百分点)</li>
 			<li>[2023/09] 在李刘鹏老师指导下，研究结合softmatch与聚类算法于图像分类的自监督学习。熟悉了linux服务器，VSCODE远程操作</li>
 			<li>[2023/08] 在李刘鹏,李太豪老师指导下于之江实验室-人工智能研究院实习。</li>
@@ -453,21 +497,6 @@
 				<td>
 						<b>Former Interns</b><br>
 						Guanqi Zhan   	<font size="2" color='grey'> <I>BS@PKU -> PhD@Oxford</I></font>
-						Mingxin Yu  		<font size="2" color='grey'> <I>BS@PKU -> PhD@MIT</I></font>
-						Junning Shao 		<font size="2" color='grey'> <I>BS@PKU -> PhD@THU</I></font>
-						Zihan Ding  		<font size="2" color='grey'> <I>MSc@Imperial -> PhD@Princeton</I></font>	<br>
-						Jiahao Huang  	<font size="2" color='grey'> <I>BS@BIT -> PhD@Imperial</I></font>
-						Jialei Huang  	<font size="2" color='grey'> <I>BS@PKU -> PhD@THU</I></font>
-						Haoqi Yuan  		<font size="2" color='grey'> <I>BS@PKU -> PhD@PKU</I></font>
-						Andrew Zhao			<font size="2" color='grey'> <I>BS@UBC -> PhD@THU</I></font>	<br>
-						Yihao Zhao  		<font size="2" color='grey'> <I>BS@PKU -> PhD@PKU</I></font>
-						Bingchan Zhao  	<font size="2" color='grey'> <I>BS@PKU -> PhD@PKU</I></font>
-						Lan Lyu 	  		<font size="2" color='grey'> <I>BS@PKU -> MSc@CMU</I></font>
-						Minghang Zheng  <font size="2" color='grey'> <I>BS@PKU -> PhD@PKU</I></font>	<br>
-						Zizheng Guo  		<font size="2" color='grey'> <I>BS@PKU -> PhD@PKU</I></font>
-						Jie Ren  				<font size="2" color='grey'> <I>BS@XDU -> PhD@Edin.</I></font>
-						Yian Wang   		<font size="2" color='grey'> <I>BS@PKU -> PhD@UMass</I></font>
-						Kejian Shi  		<font size="2" color='grey'> <I>MSc@Imperial -> PhD@CUHK</I></font> <br>
 						Lin Dong  		  <font size="2" color='grey'> <I>PostDoc@PKU -> Associate Prof in AI@CUPES</I></font>
 						<br> <font color="#ff0000">招收校内外实习生 (gap year, 研究生等)，对博后、RA和外地访问学生提供充足补贴</font>
 					</td>
@@ -541,7 +570,7 @@
 	 	 <td class="pub_td2"><b>Probabilistic Mixture-of-Experts for Efficient Deep Reinforcement Learning</b><br>Jie Ren*, Yewen Li*, Zihan Ding, Wei Pan, Hao Dong<br><i>arXiv 20xx.xxx</i><br>[<a href="https://arxiv.org/pdf/20xxxx.pdf">Paper</a>]
 	</td></tr> -->
 
-					<tr class="paper2">
+					<tr class="paper1">
 						<td class="pub_td1">
 							<div class="teaser_img_div"><img class="teaser_img"
 										src='images/paper/2024_DK-Clip.png' /></a></div>
@@ -558,6 +587,10 @@
 
 
 				</table>
+
+				<a href="" target="\_blank">
+					<img src="images/others/AGI_structure.png" style="width:30%;" />
+				</a>
 
 			</div>
 
@@ -578,12 +611,127 @@
 		-->
 
 
-			<a href="" target="\_blank">
-				<img src="https://deep-generative-models.github.io/files/web/water-bottom-min.png" width="1200" />
-			</a>
+			
+
+
+			<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+			<script>
+				particlesJS("particles-js", {
+					"particles": {
+						"number": {
+							"value": 50,
+							"density": {
+								"enable": true,
+								"value_area": 800
+							}
+						},
+						"color": {
+							"value": "#ffffff"
+						},
+						"shape": {
+							"type": "circle",
+							"stroke": {
+								"width": 0,
+								"color": "#000000"
+							},
+							"polygon": {
+								"nb_sides": 5
+							},
+							"image": {
+								"src": "img/github.svg",
+								"width": 100,
+								"height": 100
+							}
+						},
+						"opacity": {
+							"value": 0.5,
+							"random": false,
+							"anim": {
+								"enable": false,
+								"speed": 1,
+								"opacity_min": 0.1,
+								"sync": false
+							}
+						},
+						"size": {
+							"value": 3,
+							"random": true,
+							"anim": {
+								"enable": false,
+								"speed": 40,
+								"size_min": 0.1,
+								"sync": false
+							}
+						},
+						"line_linked": {
+							"enable": true,
+							"distance": 150,
+							"color": "#ffffff",
+							"opacity": 0.4,
+							"width": 1
+						},
+						"move": {
+							"enable": true,
+							"speed": 6,
+							"direction": "none",
+							"random": false,
+							"straight": false,
+							"out_mode": "out",
+							"bounce": false,
+							"attract": {
+								"enable": false,
+								"rotateX": 600,
+								"rotateY": 1200
+							}
+						}
+					},
+					"interactivity": {
+						"detect_on": "canvas",
+						"events": {
+							"onhover": {
+								"enable": true,
+								"mode": "repulse"
+							},
+							"onclick": {
+								"enable": true,
+								"mode": "push"
+							},
+							"resize": true
+						},
+						"modes": {
+							"grab": {
+								"distance": 400,
+								"line_linked": {
+									"opacity": 1
+								}
+							},
+							"bubble": {
+								"distance": 400,
+								"size": 40,
+								"duration": 2,
+								"opacity": 8,
+								"speed": 3
+							},
+							"repulse": {
+								"distance": 200,
+								"duration": 0.4
+							},
+							"push": {
+								"particles_nb": 4
+							},
+							"remove": {
+								"particles_nb": 2
+							}
+						}
+					},
+					"retina_detect": true
+				});
+			</script>
 
 			<!-- By enabling page-based impression tracking you agree that your impression data may be shared with Advertisers and/or third parties. -->
-			<script src="https://www.anrdoezrs.net/am/100163099/impressions/page/am.js"></script>
+			<!-- <script src="https://www.anrdoezrs.net/am/100163099/impressions/page/am.js"></script> -->
+			<script src="script.js"></script>
+
 			<script>
 				let paper1= document.querySelectorAll(".paper1")
 				let paper2= document.querySelectorAll(".paper2")
