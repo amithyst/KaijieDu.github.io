@@ -16,7 +16,7 @@
 			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 			font-weight: 300;
 			font-size: 16px;
-			background-color: rgba(255, 255, 255, 0.5);
+			background-color: rgba(255, 255, 255, 0.4);
 		}
 
 		
@@ -28,7 +28,7 @@
             width: 100%;
             height: 100%;
             z-index: -1; /* 位于其他内容之下 */
-            background: #DDF; /* 背景颜色 */
+            background: #EEF; /* 背景颜色 */
         }
 
 		/* 确保其他内容不被粒子动画覆盖 */
@@ -89,7 +89,7 @@
 		}
 
 		tr {
-			background-color: rgba(255, 255, 255, 0.5);
+			background-color: rgba(255, 255, 255, 0.4);
 		}
 
 		div#container {
@@ -98,7 +98,7 @@
 			width: 1200px;
 			text-align: left;
 			position: relative;
-			background-color:  rgba(255, 255, 255, 0.5);
+			background-color:  rgba(255, 255, 255, 0.4);
 		}
 
 		div#DocInfo {
@@ -156,7 +156,7 @@
 		}
 
 		.section_div {
-			background-color: rgba(255, 255, 255, 0.5);
+			background-color: rgba(255, 255, 255, 0.4);
 			padding: 10px 10px 10px 10px;
 			margin: 10px 10px 10px 10px;
 			//border: 1px solid #AAA;
@@ -200,11 +200,11 @@
 			font-weight: 500;
 		}
 		body {
-			background-color: #FFF;
+			background-color: rgba(255, 255, 255, 0.4);
 		}
 
 		#personal_info {
-			background-color: #FFF;
+			background-color: rgba(255, 255, 255, 0.1);
 		}
 
 		img.teaser_img {
@@ -274,10 +274,9 @@
 						<td>
 							<div id="slider" class="slider">
 								<div class="slides">
-									<img src="images/kaijiedu/Jack.png" style="width:30%;">
+									<img src="images/kaijiedu/Jack.png" style="width:40%;">
 									<!-- 添加更多图片 -->
-									<img src="images/kaijiedu/Sea.jpg" style="width:30%;">
-									<img src="images/kaijiedu/Award.jpg" style="width:30%;">
+									<img src="images/kaijiedu/Sea.jpg" style="width:40%;">
 									<!-- 根据需要继续添加 -->
 								</div>
 							</div>
@@ -352,6 +351,22 @@
 				<br>
 				STEP6 再将与训练好的模型让他“意识”到现实世界，增加具身智能等
 
+				<br><br>
+				<a href="/paper/AGI研究计划.pdf" download>My Research Proposal Download</a><br>
+				<a href="javascript:void(0);" onclick="openPdfPreview('/paper/AGI研究计划.pdf')">PDF Preview</a>
+
+				<script>
+				function openPdfPreview(pdfUrl) {
+					// 设置新窗口的参数
+					const windowFeatures = "width=800,height=600,resizable,scrollbars=yes,status=1";
+					// 打开新窗口并嵌入PDF
+					const previewWindow = window.open("", "_blank", windowFeatures);
+					previewWindow.document.write(`
+						<iframe src="${pdfUrl}" frameborder="0" style="width:100%;height:100%"></iframe>
+					`);
+					previewWindow.document.title = "PDF 预览"; // 设置新窗口的标题
+				}
+				</script>
 				<br><br>
 
 				I am Kaijie Du, an Applied Mathematics student at Fudan University’s School of Mathematical Sciences, 
@@ -435,7 +450,7 @@
 <hr> -->
 
 			<div id="lab" class='section_div' id='ResearchGroup'>
-				<h2>有没有老师能捞捞我</h2>
+				<h2>有没有老师能捞捞我 SEEKING SUPPORT FOR AGI</h2>
 
 				I'm <b><font color="red" style="background-color:yellow;" >REALLY </font></b> </li>
 				interested in studying how to improve the learning ability of artificial intelligence systems.
@@ -445,6 +460,69 @@
 				
 				<br><br>
 
+				<!-- 链接 -->
+				<a href="javascript:void(0);" onclick="openSlideShow()">查看我的奖状 My Award</a>
+
+				<script>
+				function openSlideShow() {
+					const windowFeatures = "width=800,height=600,resizable,scrollbars=yes,status=1";
+					const slideWindow = window.open("", "_blank", windowFeatures);
+			
+					// 插入HTML内容
+					slideWindow.document.write(`
+						<style>
+							.slides { display: none; }
+							img { width: 100%; height: auto; }
+						</style>
+						<div id="slideShow">
+							<img class="slides" src="images/award/Award.jpg">
+							<img class="slides" src="images/award/Math1.jpg">
+							
+							<!-- 添加更多图片如果需要 -->
+						</div>
+						<button onclick="plusSlides(-1)">❮ Prev</button>
+						<button onclick="plusSlides(1)">Next ❯</button>
+					`);
+					
+					// 添加幻灯片脚本
+					slideWindow.document.write(`
+						<script>
+						var slideIndex = 0;
+						showSlides(slideIndex);
+						var timer;
+			
+						function plusSlides(n) {
+							showSlides(slideIndex += n);
+							resetTimer(); // 重置计时器
+						}
+			
+						function showSlides(n) {
+							var i;
+							var slides = document.getElementsByClassName("slides");
+							if (n >= slides.length) { slideIndex = 0; }
+							if (n < 0) { slideIndex = slides.length - 1; }
+							for (i = 0; i < slides.length; i++) {
+								slides[i].style.display = "none";
+							}
+							slides[slideIndex].style.display = "block";
+						}
+			
+						function startShow() {
+							timer = setInterval(function() { plusSlides(1) }, 3000); // 每3秒自动切换
+						}
+			
+						function resetTimer() {
+							clearInterval(timer);
+							startShow();
+						}
+			
+						startShow(); // 启动幻灯片
+						<\/script>
+					`);
+			
+					slideWindow.document.title = "我的奖状 My Award"; // 设置新窗口的标题
+				}
+				</script>
 
 				<!-- <details><summary><b><font color="1367a7"> lab members</font></b></summary> -->
 
@@ -535,6 +613,9 @@
 </div>
 <hr> -->
 
+
+	
+
 			<!-- <div class='section_div'>
 				<h2>Services</h2>
 				<li>  </li>			
@@ -619,20 +700,20 @@
 				particlesJS("particles-js", {
 					"particles": {
 						"number": {
-							"value": 50,
+							"value": 200,
 							"density": {
 								"enable": true,
 								"value_area": 800
 							}
 						},
 						"color": {
-							"value": "#ffffff"
+							"value": ["#6666ff", "#00ff00", "#0000ff", "#00ffff"]
 						},
 						"shape": {
 							"type": "circle",
 							"stroke": {
 								"width": 0,
-								"color": "#000000"
+								"color": ["#ffffff","#6666ff", "#00ffff"]
 							},
 							"polygon": {
 								"nb_sides": 5
@@ -645,7 +726,7 @@
 						},
 						"opacity": {
 							"value": 0.5,
-							"random": false,
+							"random": true,
 							"anim": {
 								"enable": false,
 								"speed": 1,
@@ -654,19 +735,19 @@
 							}
 						},
 						"size": {
-							"value": 3,
+							"value": 5,
 							"random": true,
 							"anim": {
 								"enable": false,
 								"speed": 40,
-								"size_min": 0.1,
+								"size_min": 1,
 								"sync": false
 							}
 						},
 						"line_linked": {
 							"enable": true,
 							"distance": 150,
-							"color": "#ffffff",
+							"color": "#66ff66",
 							"opacity": 0.4,
 							"width": 1
 						},
