@@ -3,15 +3,15 @@
 	<html>
 
 	<head>
-		<!-- 支持中文 -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Kaijie Du - Tsinghua University |杜楷劼 清华大学软件学院</title>
+		<title>Kaijie Du - Tsinghua University</title>
 		<link rel="stylesheet" href="style.css">
 		<style type="text/css">
-		
 
 		body {
-			width: 1400px;
+			max-width: 1400px;
+			width: 95%;
+			margin: 0 auto;
 			text-align: center;
 			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 			font-weight: 300;
@@ -22,20 +22,19 @@
 		
 
 		#particles-js {
-            position: fixed; /* 背景固定不随滚动条滚动 */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* 位于其他内容之下 */
-            background: #EEF; /* 背景颜色 */
+            z-index: -1;
+            background: #EEF;
         }
 
-		/* 确保其他内容不被粒子动画覆盖 */
         .content {
             position: relative;
-            z-index: 1; /* 高于粒子层 */
-            color: white; /* 设置文本颜色以确保可见性 */
+            z-index: 1;
+            color: white;
             padding: 20px;
         }
 
@@ -49,8 +48,6 @@
 			padding: 5px;
 		}
 
-		/* 选颜色 https://www.color-hex.com/color-names.html */
-		/* https://www.htmlcsscolor.com/hex/3B3B3B */
 		table.pub_table,
 		td.pub_td1,
 		td.pub_td2 {
@@ -59,9 +56,7 @@
 			padding-bottom: 10px;
 			padding-top: 10px;
 			padding-left: 10px;
-			width: 1100px;
-			/* width: 1250px; /* hao*/
-			*/
+			width: 100%;
 		}
 
 		td.pub_td1 {
@@ -95,7 +90,8 @@
 		div#container {
 			margin-left: auto;
 			margin-right: auto;
-			width: 1200px;
+			width: 90%;
+			max-width: 1200px;
 			text-align: left;
 			position: relative;
 			background-color:  rgba(255, 255, 255, 0.4);
@@ -103,7 +99,8 @@
 
 		div#DocInfo {
 			color: #9B9B9B;
-			height: 128px;
+			min-height: 128px;
+			text-align: right;
 		}
 
 		h4,
@@ -142,16 +139,12 @@
 			right: 0px;
 		}
 
-		ul { margin: 0px; } /* remove space on ul list */
+		ul { margin: 0px; }
 
 		a:link,
 		a:visited {
 			color: #1367a7;
-			*/
-			/* 蓝色
-						/* color: #990000; /* 深红艄1�71ￄ1�771ￄ1�71ￄ1�777 990000 8b2323*/
-			*/ font-family: Tahoma, Geneva, sans-serif;
-			/* 加粗 */
+			font-family: Tahoma, Geneva, sans-serif;
 			text-decoration: none;
 		}
 
@@ -205,6 +198,17 @@
 
 		#personal_info {
 			background-color: rgba(255, 255, 255, 0.1);
+			width: 100%;
+			table-layout: fixed;
+		}
+
+		#personal_info td:first-child {
+			width: 620px;
+			min-width: 620px;
+		}
+
+		#personal_info td:last-child {
+			width: auto;
 		}
 
 		img.teaser_img {
@@ -225,7 +229,6 @@
 			width: 286px;
 		}
 
-		/* hao： table折叠  */
 		/* .chartTable{
 									width:100%;
 									margin-top:10px;
@@ -274,11 +277,8 @@
 						<td>
 							<div id="slider" class="slider">
 								<div class="slides">
-									<img src="images/kaijiedu/Jack.png" style="width:40%;">
-									<!-- 添加更多图片 -->
-									<img src="images/kaijiedu/Sea.jpg" style="width:40%;">
-									<!-- <img src="images/kaijiedu/cat.jpg" style="width:40%;"> -->
-									<!-- 根据需要继续添加 -->
+									<img src="images/kaijiedu/Jack.png" style="width:600px; max-width:100%;">
+									<img src="images/kaijiedu/Sea.jpg" style="width:600px; max-width:100%;">
 								</div>
 							</div>
 							<!-- <button class="prev" onclick="moveSlide(-1)">❮</button>
@@ -290,12 +290,10 @@
 						<td>
 							<div id="DocInfo">
 								<h1>Kaijie Du</h1>
-								<!-- 杜楷劼 复旦大学-数学科学学院 <br><br> -->
-								杜楷劼<br>复旦大学-数学科学学院-数学与应用数学<br>清华大学-软件学院-电子信息<br><br>
+								Kaijie Du (杜楷劼)<br>
+								B.S. in Mathematics, Fudan University<br>
+								Ph.D. student, Tsinghua University<br><br>
 								21300180048@m.fudan.edu.cn<br>djj25@mails.tsinghua.edu.cn<br>smiledkj@gmail.com<br><br>
-								<!-- <a href="https://scholar.google.com/citations?hl=en&user=xLFL4sMAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> / -->
-					
-								<!-- Github: -->
 								<a href="https://github.com/amithyst">Github</a> </a>
 								<br>
 								<a href="https://www.linkedin.com/in/楷劼-杜-623153307">LinkedIn</a> </a>
@@ -303,26 +301,12 @@
 								<a href="https://x.com/DuKaijie">Twitter</a> </a>
 								<br>
 								<a href="https://openreview.net/profile?id=~Kaijie_Du1">OpenReview</a> </a>
-								<!-- / -->
-								<!-- <a href="https://github.com/hyperplane-lab">Lab</a> </a> -->
-								<!-- https://orcid.org/0000-0002-7984-9909 -->
-								<br> <br>
-								<!-- <li>
-			<span style="font-weight:bold;">Open positions available (
-					<a href="recurit/phd.html">Ph.D</a>,
-					<a href="recurit/postdoc.html">Postdoc</a>,
-					<a href="recurit/engineer.html">Engineers</a>,
-					Interns ). Contact me for details.</span>
-		 </li> -->
 							</div><br>
 						</td>
 					</tr>
 				</table>
 
 				<h2>About Me</h2>
-
-				杜楷劼，本科毕业于复旦大学数学科学学院数学与应用数学专业，现为清华大学软件学院直博生。
-				<br><br>
 
 				I am Kaijie Du, a Ph.D. student at Tsinghua University's School of Software,
 				and previously an Applied Mathematics student at Fudan University's School of Mathematical Sciences.
@@ -366,31 +350,17 @@
 
 
 			<div class='section_div'>
+			<h2>Honors and Awards</h2>
+			<li>[2024/05] Outstanding Winner, Mathematical Contest in Modeling (MCM) with AMS Award</li>
+			<li>[2023/12] First Prize, National Mathematics Competition for College Students (Shanghai Region); Yongying Fund Scholarship</li>
+			<li>[2022/12] Second Prize, National Mathematics Competition for College Students (Shanghai Region); Second Class Outstanding Undergraduate Award, Fudan University</li>
+			<br>
+			<a href="javascript:void(0);" onclick="openSlideShow()">View My Awards</a>
+			</div>
+			<hr>
+
+			<div class='section_div'>
 			<h2>News</h2>
-			<!-- <li>[2024/07]本学期满绩</li> -->
-			<!-- <li>[2024/05/03] <b><font color="red" style="background-color:yellow;" >NEW</font></b>我的团队获得<b><font color="red" style="background-color:yellow;" >2024年美国大学生建模竞赛 特等奖 Outstanding Winner(AMS Award)</font></b> </li> -->
-			<!-- <li>[2024/04/24] 撰写个人陈述 </li>
-			<li>[2024/04/21] 编写第一篇paper的具体研究计划</li>
-			<li>[2024/04/20] 仔细研究了minedojo/Voyager项目,尝试利用Llama3模型代替GPT4 API复现项目功能</li>
-			<li>[2024/04/17] 提出一系列AGI的搭建结构，编写好初步的AGI研究方案(只是关于架构的初稿)。
-				<a href="/paper/AGI研究计划_整体架构.pdf" download>My Structure of AGI Download</a>
-			</li>
-			<li>[2024/04] 尝试复现并研究minedojo项目</li>
-			<li>[2024/03] 复现了github上一系列项目，自学了计算机基础课程《数据结构》《计算机组成原理》</li>
-			<li>[2024/02/27] CVPR终究是拒稿了/(ㄒoㄒ)/~~</li>
-			<li>[2024/02] 在杨老师提点下完成了RL入门</li>
-			<li>[2024/01] 本学期专业课如概率论，人工智能<b><font color="red" style="background-color:yellow;" >全A</font></b>。寒假里熟悉了leetcode的C++题目，能cover所有middle题。</li>-->
-			<!-- <li>[2023/12] 获得了<b><font color="#FF00DD" style="background-color:rgba(255, 255, 0, 0.4);" >全国大学生数学竞赛上海赛区一等奖，复旦大学永赢基金奖学金（冠名一等奖）</font></b></li> -->
-			<!-- <li>[2023/11] softmatch算法复现失败,CIFAR数据集中没有达到论文里的准确度(相差6个百分点)</li>
-			<li>[2023/09] 在李刘鹏老师指导下，研究结合softmatch与聚类算法于图像分类的自监督学习。熟悉了linux服务器，VSCODE远程操作</li>
-			<li>[2023/08] 在李刘鹏,李太豪老师指导下于之江实验室-人工智能研究院实习,参与DK-CLIP项目。</li>
-			<li>[2023/07] 在李刘鹏,李太豪老师指导下于之江实验室-人工智能研究院学习。</li>
-			<li>[2023/06] 本学期所有专业课<b><font color="red" style="background-color:yellow;" >均获A类成绩,学年均绩3.87(5/195)</font></b> </li>
-			<li>[2023/04] <b><font color="red" style="background-color:yellow;" >对人工智能开始感兴趣。</font></b></li>
-			<li>[2023/01] 本学期所有专业课<b><font color="red" style="background-color:yellow;" >均获A类成绩,均绩3.91(2/195)</font></b> </li>
-			<details><summary><b><font color="1367a7"> show more </font></b></summary>
-			<li>[2022/12] 获得了<b><font color="#FF00DD" style="background-color:rgba(255, 255, 0, 0.4);" >全国大学生数学竞赛上海赛区二等奖，复旦大学优秀本科生二等奖 </font></b> </li>
-			<li>[2022/06] 本学期所有专业课<b><font color="red" style="background-color:yellow;" >均获A类成绩</font></b> </li> -->
 			</div>
 
 			<!-- <ul>
@@ -413,25 +383,11 @@
 <hr> -->
 
 			<div id="lab" class='section_div' id='ResearchGroup'>
-				<!-- <h2>已上岸 清华大学软件学院工程博士，专业为电子信息，研究领域为人工智能</h2> -->
-
-				<!-- I'm <b><font color="red" style="background-color:yellow;" >REALLY </font></b> </li>
-				interested in studying how to improve the learning ability of artificial intelligence systems,
-				</b>by combining LLM and multi Agents</b>,
-				especially interested in <b>LLM</b>, <b>RL</b>  and <b>robotics</b>,
-				recreating and interacting the world. -->
-				
-				<br><br>
-
-				<!-- 链接 -->
-				<a href="javascript:void(0);" onclick="openSlideShow()">查看我的奖状 My Award</a>
-
 				<script>
 				function openSlideShow() {
 					const windowFeatures = "width=800,height=600,resizable,scrollbars=yes,status=1";
 					const slideWindow = window.open("", "_blank", windowFeatures);
-			
-					// 插入HTML内容
+
 					slideWindow.document.write(`
 						<style>
 							.slides { display: none; }
@@ -443,24 +399,22 @@
 							<img class="slides" src="images/award/Math1_0.jpg">
 							<img class="slides" src="images/award/Math1_1.jpg">
 							<img class="slides" src="images/award/MCM_O.png">
-							<!-- 添加更多图片如果需要 -->
 						</div>
 						<button onclick="plusSlides(-1)">❮ Prev</button>
 						<button onclick="plusSlides(1)">Next ❯</button>
 					`);
-					
-					// 添加幻灯片脚本
+
 					slideWindow.document.write(`
 						<script>
 						var slideIndex = 0;
 						showSlides(slideIndex);
 						var timer;
-			
+
 						function plusSlides(n) {
 							showSlides(slideIndex += n);
-							resetTimer(); // 重置计时器
+							resetTimer();
 						}
-			
+
 						function showSlides(n) {
 							var i;
 							var slides = document.getElementsByClassName("slides");
@@ -471,21 +425,21 @@
 							}
 							slides[slideIndex].style.display = "block";
 						}
-			
+
 						function startShow() {
-							timer = setInterval(function() { plusSlides(1) }, 3000); // 每3秒自动切换
+							timer = setInterval(function() { plusSlides(1) }, 3000);
 						}
-			
+
 						function resetTimer() {
 							clearInterval(timer);
 							startShow();
 						}
-			
-						startShow(); // 启动幻灯片
+
+						startShow();
 						<\/script>
 					`);
-			
-					slideWindow.document.title = "我的奖状 My Award"; // 设置新窗口的标题
+
+					slideWindow.document.title = "My Awards";
 				}
 				</script>
 
