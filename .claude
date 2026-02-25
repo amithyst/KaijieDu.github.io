@@ -2,3 +2,4 @@
 # 项目：个人网站 (KaijieDu.github.io)
 
 commitMessageStyle: singleChineseSentence
+gitAutoCommit: false  # 未经允许不准执行 git add/commit/push
